@@ -1,0 +1,13 @@
+default: true
+
+extends: null
+
+MD033:
+  allowed_elements:
+    - div
+    - h1
+    - h3
+    - p
+    - a
+    - img
+    - br

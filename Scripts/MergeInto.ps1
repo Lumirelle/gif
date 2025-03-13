@@ -75,7 +75,8 @@ $ManualReset = ('--manual-back' -cin $Options) -or ('-b' -cin $Options)
 # == Main Task ==
 try {
   if ($Remote) {
-    Write-GifOutput "Fetch from remote..." -ShowCurrentBranch
+    # `git fetch` output nothing, so that we should use `-LineFeed 1` to escape blank line
+    Write-GifOutput "Fetch from all remote..." -ShowCurrentBranch -LineFeed 1
     GifCore fetch --all
   }
 
@@ -83,7 +84,7 @@ try {
   GifCore switch $TargetBranch
 
   if ($Remote) {
-    Write-GifOutput "Pull from remote..." -ShowCurrentBranch
+    Write-GifOutput "Pull from remote (rebase mode)..." -ShowCurrentBranch
     GifCore pull $Remote $TargetBranch --rebase
   }
 

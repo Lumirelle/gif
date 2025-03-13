@@ -33,6 +33,8 @@ Your best git friend -- gif.
 
 Commands support now:
 
+- 'merge-into', 'mi': Merge current branch into target branch, push to remote
+  and back to source branch.
 - ...
 
 ## 🏁 Getting Started <a name = "getting_started"></a>

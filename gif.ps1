@@ -48,11 +48,11 @@ switch ($Command) {
       { $PSItem -cin 'merge-into', 'mi' } {
         Get-Help "$BinPath/Scripts/MergeInto.ps1"
       }
-    }
-    # TODO: New command above
-    Default {
-      Write-GifOutput "No such command `"$Command`" in function `"Gif.ps1`"!" -Level error -LineFeed 1
-      Exit 00101
+      # TODO: New command above
+      Default {
+        Write-GifOutput "No such command `"$Command`" in function `"Gif.ps1`"!" -Level error -LineFeed 1
+        Exit 00101
+      }
     }
   }
   { $PSItem -cin 'merge-into', 'mi' } {

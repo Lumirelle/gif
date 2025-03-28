@@ -6,3 +6,8 @@
 - [x] add IO, Core modules
 - [x] add MergeInto.ps1
 - [x] test for 1 week (2025/02/19~2025/02/26)
+
+## v0.0.2 (code: delete branch)
+
+- [ ] add DeleteBranch.ps1
+- [ ] test for 1 week or more

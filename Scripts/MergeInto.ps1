@@ -57,10 +57,10 @@ if ($Remote -is [array]) {
   Write-GifOutput 'Detected multiple remotes!' -Level warn
   if ('origin' -cin $Remote) {
     $Remote = 'origin'
-    Write-GifOutput 'Detected remote named "origin", auto switch to it!' -Level warn
+    Write-GifOutput 'Detected remote named "origin", use it as default!' -Level warn
   }
   else {
-    Write-GifOutput 'Could not find remote named "origin"!' -Level error -LineFeed 1
+    Write-GifOutput 'Could not specify a remote accurately!' -Level error -LineFeed 1
     Exit 01006
   }
 }
@@ -76,15 +76,15 @@ $ManualReset = ('--manual-back' -cin $Options) -or ('-b' -cin $Options)
 try {
   if ($Remote) {
     # `git fetch` output nothing, so that we should use `-LineFeed 1` to escape blank line
-    Write-GifOutput "Fetch from all remote..." -ShowCurrentBranch -LineFeed 1
-    GifCore fetch --all
+    Write-GifOutput "Fetch from remote `"$Remote`" (prune) ..." -ShowCurrentBranch -LineFeed 1
+    GifCore fetch $Remote --prune
   }
 
   Write-GifOutput "Switch branch from `"$SourceBranch`" to `"$TargetBranch`"..." -ShowCurrentBranch
   GifCore switch $TargetBranch
 
   if ($Remote) {
-    Write-GifOutput "Pull from remote (rebase mode)..." -ShowCurrentBranch
+    Write-GifOutput "Pull from remote (rebase)..." -ShowCurrentBranch
     GifCore pull $Remote $TargetBranch --rebase
   }
 

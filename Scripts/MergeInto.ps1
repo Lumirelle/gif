@@ -5,8 +5,8 @@ Merge "current branch" into "target branch"
 The branch to merge into
 .PARAMETER Options
 Command options:
---manual-push, -m: Manual push target branch to remote
---manual-back, -r: Manual back from target branch to source branch
+--manual-push, -p: Manual push target branch to remote
+--manual-back, -b: Manual back from target branch to source branch
 #>
 
 param (
@@ -69,7 +69,7 @@ Write-GifOutput "[MergeInto.ps1::Remote] $Remote" -Level verbose
 # This config is used for functions in "Modules/Core/Core.psm1"
 Initialize-GifCore CoreConfig @{ }
 
-$ManualPush = ('--manual-push' -cin $Options) -or ('-m' -cin $Options)
+$ManualPush = ('--manual-push' -cin $Options) -or ('-p' -cin $Options)
 $ManualReset = ('--manual-back' -cin $Options) -or ('-b' -cin $Options)
 
 # == Main Task ==

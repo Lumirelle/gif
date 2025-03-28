@@ -101,13 +101,17 @@ try {
 # == Clean ==
 catch {
   Write-GifOutput $_ -Level error
+
+  # Detect Error: Merge conflict
   if ($_ -match '^CONFLICT \(.+\):|Merge conflict') {
     $Script:ErrorType = 'MergeConflict'
   }
+  # Detect Error: Other
   else {
     $Script:ErrorType = 'Other'
   }
-  # Error: Merge conflict
+
+  # Handle Error: Merge conflict
   if ($Script:ErrorType -ceq 'MergeConflict') {
     $Confirmed = Wait-GifConfirm "You should resolve this conflict manually, or just abort this  merge?"
     if ($Confirmed) {
@@ -120,10 +124,11 @@ finally {
   if ((-not $ManualReset) -and ($Script:ErrorType -cne 'MergeConflict')) {
     Reset-GifWorkspace @{ 'Branch' = $SourceBranch }
   }
-  # Error: Merge conflict
+  # Exit with Error: Other
   if ($Script:ErrorType -ceq 'Other') {
     Exit 01201
   }
+  # Exit with Error: Merge conflict
   elseif ($Script:ErrorType -ceq 'MergeConflict') {
     Exit 01202
   }

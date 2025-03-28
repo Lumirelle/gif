@@ -35,6 +35,7 @@ Commands support now:
 
 - 'merge-into', 'mi': Merge current branch into target branch, push to remote
   and back to source branch.
+- 'delete-branch', 'db': Delete current branch on local and remote.
 - ...
 
 ## 🏁 Getting Started <a name = "getting_started"></a>

@@ -24,7 +24,7 @@
 - [About](#about)
 - [Getting Started](#getting_started)
 - [Usage](#usage)
-- [TODO](TODO.md)
+- [TODO](#todo)
 - [Authors](#authors)
 
 ## 🧐 About <a name = "about"></a>
@@ -57,6 +57,10 @@ Then, restart your terminal or computer and enjoy!
 ## 🎈 Usage <a name="usage"></a>
 
 See `gif help [command]`.
+
+## ✅ TODO <a name="todo"></a>
+
+See release note and next time plans [here](TODO.md).
 
 ## ✍️ Authors <a name = "authors"></a>
 

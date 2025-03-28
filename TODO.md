@@ -9,5 +9,5 @@
 
 ## v0.2.0 (code: delete branch)
 
-- [ ] add DeleteBranch.ps1
-- [ ] test for 1 week or more
+- [x] add DeleteBranch.ps1
+- [ ] test for 1 week or more (2025/03/28~2025/04/04+)

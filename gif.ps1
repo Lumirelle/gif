@@ -1,6 +1,6 @@
 <#
 .DESCRIPTION
-Your best git friend -- gif
+Your best git friend -- gif (v0.2.0)
 .PARAMETER Command
 Command
 .PARAMETER Options

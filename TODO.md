@@ -5,4 +5,4 @@
 - [x] add gif.ps1
 - [x] add IO, Core modules
 - [x] add MergeInto.ps1
-- [ ] test for 1 week (2025/02/19~2025/02/26)
+- [x] test for 1 week (2025/02/19~2025/02/26)

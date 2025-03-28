@@ -73,6 +73,6 @@ catch {
 finally {
   # Exit with Error: Other
   if ($Script:ErrorType -ceq 'Other') {
-    Exit 01201
+    Exit 02201
   }
 }

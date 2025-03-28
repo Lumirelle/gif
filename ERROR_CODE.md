@@ -43,5 +43,6 @@
 | 02001 | DeleteBranch.ps1 | Init & Check | You are not in a git repository                                    |
 | 02002 | DeleteBranch.ps1 | Init & Check | Your repository has no branch now                                  |
 | 02003 | DeleteBranch.ps1 | Init & Check | Detected multiple remotes and could not find remote named "origin" |
+| 02201 | DeleteBranch.ps1 | Clean        | Other error                                                        |
 
 <!-- markdownlint-enable -->

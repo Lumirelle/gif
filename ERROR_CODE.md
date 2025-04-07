@@ -14,7 +14,7 @@
 | ---- | ---------------- |
 | 00   | gif.ps1          |
 | 01   | MergeInto.ps1    |
-| 02   | DeleteBranch.ps1 |
+| 02   | BranchDelete.ps1 |
 
 ## Part
 
@@ -40,12 +40,12 @@
 | 01006 | MergeInto.ps1    | Init & Check | Detected multiple remotes and could not find remote named "origin" |
 | 01201 | MergeInto.ps1    | Clean        | Other error                                                        |
 | 01202 | MergeInto.ps1    | Clean        | Merge conflict                                                     |
-| 02001 | DeleteBranch.ps1 | Init & Check | Target branch cannot be null or empty                              |
-| 02002 | DeleteBranch.ps1 | Init & Check | You are not in a git repository                                    |
-| 02003 | DeleteBranch.ps1 | Init & Check | Your repository has no branch now                                  |
-| 02004 | DeleteBranch.ps1 | Init & Check | You can't delete current branch                                    |
-| 02005 | DeleteBranch.ps1 | Init & Check | Detected multiple remotes and could not find remote named "origin" |
-| 02006 | DeleteBranch.ps1 | Init & Check | Target branch does not exist locally and remotely                  |
-| 02201 | DeleteBranch.ps1 | Clean        | Other error                                                        |
+| 02001 | BranchDelete.ps1 | Init & Check | Target branch cannot be null or empty                              |
+| 02002 | BranchDelete.ps1 | Init & Check | You are not in a git repository                                    |
+| 02003 | BranchDelete.ps1 | Init & Check | Your repository has no branch now                                  |
+| 02004 | BranchDelete.ps1 | Init & Check | You can't delete current branch                                    |
+| 02005 | BranchDelete.ps1 | Init & Check | Detected multiple remotes and could not find remote named "origin" |
+| 02006 | BranchDelete.ps1 | Init & Check | Target branch does not exist locally and remotely                  |
+| 02201 | BranchDelete.ps1 | Clean        | Other error                                                        |
 
 <!-- markdownlint-enable -->

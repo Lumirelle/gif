@@ -7,7 +7,7 @@
 - [x] add MergeInto.ps1
 - [x] test for 1 week (2025/02/19~2025/02/26)
 
-## v0.2.0 (code: delete branch)
+## v0.2.0 (code: branch delete)
 
-- [x] add DeleteBranch.ps1
-- [ ] test for 1 week or more (2025/03/28~2025/04/04+)
+- [x] add BranchDelete.ps1
+- [x] test for 1 week or more (2025/03/28~2025/04/04+)

@@ -33,9 +33,9 @@ Your best git friend -- gif.
 
 Commands support now:
 
-- 'merge-into', 'mi': Merge current branch into target branch, push to remote
+- 'merge-into', 'mi', 'm': Merge current branch into target branch, push to remote
   and back to source branch.
-- 'delete-branch', 'db': Delete current branch on local and remote.
+- 'branch-delete', 'bd': Delete current branch on local and remote.
 - ...
 
 ## 🏁 Getting Started <a name = "getting_started"></a>

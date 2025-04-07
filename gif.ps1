@@ -1,6 +1,6 @@
 <#
 .DESCRIPTION
-Your best git friend -- gif
+Your best git friend -- gif (v0.2.0)
 .PARAMETER Command
 Command
 .PARAMETER Options
@@ -48,6 +48,9 @@ switch ($Command) {
       { $PSItem -cin 'merge-into', 'mi' } {
         Get-Help "$BinPath/Scripts/MergeInto.ps1"
       }
+      { $PSItem -cin 'delete-branch', 'db' } {
+        Get-Help "$BinPath/Scripts/DeleteBranch.ps1"
+      }
       # TODO: New command above
       Default {
         Write-GifOutput "No such command `"$Command`" in function `"Gif.ps1`"!" -Level error -LineFeed 1
@@ -57,6 +60,9 @@ switch ($Command) {
   }
   { $PSItem -cin 'merge-into', 'mi' } {
     & "$BinPath/Scripts/MergeInto.ps1" @Options
+  }
+  { $PSItem -cin 'delete-branch', 'db' } {
+    & "$BinPath/Scripts/DeleteBranch.ps1" @Options
   }
   # TODO: New command below
   Default {

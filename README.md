@@ -24,7 +24,7 @@
 - [About](#about)
 - [Getting Started](#getting_started)
 - [Usage](#usage)
-- [TODO](TODO.md)
+- [TODO](#todo)
 - [Authors](#authors)
 
 ## 🧐 About <a name = "about"></a>
@@ -35,6 +35,7 @@ Commands support now:
 
 - 'merge-into', 'mi': Merge current branch into target branch, push to remote
   and back to source branch.
+- 'delete-branch', 'db': Delete current branch on local and remote.
 - ...
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
@@ -56,6 +57,10 @@ Then, restart your terminal or computer and enjoy!
 ## 🎈 Usage <a name="usage"></a>
 
 See `gif help [command]`.
+
+## ✅ TODO <a name="todo"></a>
+
+See release note and next time plans [here](TODO.md).
 
 ## ✍️ Authors <a name = "authors"></a>
 

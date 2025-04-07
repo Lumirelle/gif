@@ -26,6 +26,12 @@ if ($Global:GifVerbose) {
   Write-GifOutput ' ' -LineFeed 1
 }
 
+# TODO: New command alias below
+$Alias = @{
+  'MergeInto'    = @('m', 'mi', 'merge-into')
+  'BranchDelete' = @('bd', 'branch-delete')
+}
+
 Write-GifOutput "[Gif.ps1::Param]`nCommand: $Command`nParameters: $($Options -join "`n")" -Level verbose
 
 # "git switch" need v2.23+
@@ -45,11 +51,11 @@ switch ($Command) {
       break
     }
     switch ($Options[0]) {
-      { $PSItem -cin 'merge-into', 'mi' } {
+      { $PSItem -cin $Alias['MergeInto'] } {
         Get-Help "$BinPath/Scripts/MergeInto.ps1"
       }
-      { $PSItem -cin 'delete-branch', 'db' } {
-        Get-Help "$BinPath/Scripts/DeleteBranch.ps1"
+      { $PSItem -cin $Alias['BranchDelete'] } {
+        Get-Help "$BinPath/Scripts/BranchDelete.ps1"
       }
       # TODO: New command above
       Default {
@@ -58,11 +64,11 @@ switch ($Command) {
       }
     }
   }
-  { $PSItem -cin 'merge-into', 'mi' } {
+  { $PSItem -cin $Alias['MergeInto'] } {
     & "$BinPath/Scripts/MergeInto.ps1" @Options
   }
-  { $PSItem -cin 'delete-branch', 'db' } {
-    & "$BinPath/Scripts/DeleteBranch.ps1" @Options
+  { $PSItem -cin $Alias['BranchDelete'] } {
+    & "$BinPath/Scripts/BranchDelete.ps1" @Options
   }
   # TODO: New command below
   Default {

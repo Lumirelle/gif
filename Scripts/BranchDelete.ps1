@@ -14,7 +14,7 @@ param (
 )
 
 # == Init & Check ==
-Write-GifOutput "[DeleteBranch.ps1::Param]`nTargetBranch: $TargetBranch`nOptions: $($Options -join "`n")" -Level verbose
+Write-GifOutput "[BranchDelete.ps1::Param]`nTargetBranch: $TargetBranch`nOptions: $($Options -join "`n")" -Level verbose
 
 if (-not $TargetBranch) {
   Write-GifOutput 'Target branch cannot be null or empty!' -Level error -LineFeed 1
@@ -22,14 +22,14 @@ if (-not $TargetBranch) {
 }
 
 $HiddenFolders = Get-ChildItem -Name -Attributes D+H
-Write-GifOutput "[DeleteBranch.ps1::HiddenFolders]`n$($HiddenFolders -join "`n")" -Level verbose
+Write-GifOutput "[BranchDelete.ps1::HiddenFolders]`n$($HiddenFolders -join "`n")" -Level verbose
 if ('.git' -cnotin $HiddenFolders) {
   Write-GifOutput 'You are not in a git repository!' -Level error -LineFeed 1
   Exit 02002
 }
 
 $Branches = & git for-each-ref --format='%(refname:short)' refs/heads/
-Write-GifOutput "[DeleteBranch.ps1::Branches]`n$($Branches -join "`n")" -Level verbose
+Write-GifOutput "[BranchDelete.ps1::Branches]`n$($Branches -join "`n")" -Level verbose
 if (-not $Branches) {
   Write-GifOutput 'Your repository has no branch now, create a branch by command "git branch -c <branch>"!' -Level error -LineFeed 1
   Exit 02003
@@ -44,7 +44,7 @@ if ($SourceBranch -ceq $TargetBranch) {
 
 $Remote = & git remote
 if ($Remote -is [array]) {
-  Write-GifOutput "[DeleteBranch.ps1::Remote]`n$($Remote -join "`n")" -Level verbose
+  Write-GifOutput "[BranchDelete.ps1::Remote]`n$($Remote -join "`n")" -Level verbose
   Write-GifOutput 'Detected multiple remotes!' -Level warn
   if ('origin' -cin $Remote) {
     $Remote = 'origin'
@@ -55,7 +55,7 @@ if ($Remote -is [array]) {
     Exit 02005
   }
 }
-Write-GifOutput "[DeleteBranch.ps1::Remote] $Remote" -Level verbose
+Write-GifOutput "[BranchDelete.ps1::Remote] $Remote" -Level verbose
 
 $BranchExists = & git rev-parse --verify $TargetBranch 2>$null
 Write-GifOutput "[MergeInto.ps1::BranchExists] $BranchExists" -Level verbose

@@ -24,6 +24,7 @@
 - [About](#about)
 - [Getting Started](#getting_started)
 - [Usage](#usage)
+- [Release Note](#release_note)
 - [TODO](#todo)
 - [Authors](#authors)
 
@@ -58,9 +59,13 @@ Then, restart your terminal or computer and enjoy!
 
 See `gif help [command]`.
 
+## 📑 Release Note <a name="todo"></a>
+
+See release note and current version number [here](VERSION.md).
+
 ## ✅ TODO <a name="todo"></a>
 
-See release note and next time plans [here](TODO.md).
+See todos [here](TODO.md).
 
 ## ✍️ Authors <a name = "authors"></a>
 

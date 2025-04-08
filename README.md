@@ -1,5 +1,5 @@
 <h1 align="center">
-  <a href="https://github.com/lyana-nullptr/gif" rel="noopener">
+  <a href="https://github.com/Lumirelle/gif" rel="noopener">
 </h1>
 
 <h3 align="center">gif</h3>
@@ -7,8 +7,8 @@
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)](.)
-[![GitHub Issues](https://img.shields.io/github/issues/lyana-nullptr/gif.svg)](https://github.com/lyana-nullptr/gif/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/lyana-nullptr/gif.svg)](https://github.com/lyana-nullptr/gif/pulls)
+[![GitHub Issues](https://img.shields.io/github/issues/Lumirelle/gif.svg)](https://github.com/Lumirelle/gif/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/Lumirelle/gif.svg)](https://github.com/Lumirelle/gif/pulls)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 </div>
@@ -49,7 +49,7 @@ for more detail.
 
 ### Installing
 
-Download the [latest file](https://github.com/lyana-nullptr/profiles/archive/refs/heads/main.zip)
+Download the [latest file](https://github.com/Lumirelle/profiles/archive/refs/heads/main.zip)
 and unzip it, add the path of `gif.ps1` to the `PATH` environment variable of your
 computer.
 
@@ -59,7 +59,7 @@ Then, restart your terminal or computer and enjoy!
 
 See `gif help [command]`.
 
-## 📑 Release Note <a name="todo"></a>
+## 📑 Release Note <a name="release_note"></a>
 
 See release note and current version number [here](VERSION.md).
 
@@ -69,4 +69,4 @@ See todos [here](TODO.md).
 
 ## ✍️ Authors <a name = "authors"></a>
 
-- [@Lyana-nullptr](https://github.com/lyana-nullptr) - Anything
+- [@Lumirelle](https://github.com/Lumirelle) - Anything

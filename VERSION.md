@@ -1,8 +1,12 @@
-# v0.2.1 RELEASE NOTE
+# v0.2.12 RELEASE NOTE
 
 ## v0.x
 
 ### v0.2.x
+
+v0.2.2
+
+- update README.md & LICENSE
 
 v0.2.1
 

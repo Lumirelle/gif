@@ -1,3 +1,8 @@
+> [!CAUTION]
+> When you become more and more familiar with Git, you will find that using Git aliases is sufficient and simpler.
+> 
+> See [my .gitconfig](../../../profiles/) for more details.
+
 <h1 align="center">
   <a href="https://github.com/Lumirelle/gif" rel="noopener">
 </h1>
